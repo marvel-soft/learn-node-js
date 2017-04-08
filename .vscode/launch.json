@@ -5,21 +5,15 @@
     "version": "0.2.0",
     "configurations": [{
             "type": "node",
-            "request": "attach",
-            "name": "Attach to Process",
-            "processId": "${command:PickProcess}",
-            "port": 5858
-        },
-        {
-            "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${file}"
+            "program": "${file}",
+            "outFiles": ["/Users/jimsievers/git/learn-node-js/**/*.js"]
         },
         {
             "type": "node",
             "request": "attach",
-            "name": "Attach to Port",
+            "name": "Attach to Process",
             "address": "localhost",
             "port": 5858
         }
